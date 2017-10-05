@@ -1,0 +1,8 @@
+//Karel aprende a regresar a casa
+class program {
+    program () {
+        iterate(3){
+            move();
+        }
+    }
+}
