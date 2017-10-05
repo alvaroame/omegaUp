@@ -1,0 +1,8 @@
+//K-Básico-Camina hasta pared
+class program {
+    program () {
+        while(frontIsClear())
+        move();
+        turnoff();
+    }
+}
