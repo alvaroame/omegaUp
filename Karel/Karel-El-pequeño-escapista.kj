@@ -1,0 +1,10 @@
+//Karel, El pequeño escapista
+class program {
+    program () {
+        while(frontIsBlocked()){
+            turnleft();
+        }
+        move();
+        turnoff();
+    }
+}
