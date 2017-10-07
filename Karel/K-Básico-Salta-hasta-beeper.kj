@@ -1,0 +1,27 @@
+//K-Básico-Salta hasta beeper
+class program {
+    void saltar(){
+         turnleft();
+         move();
+         turnleft();
+         turnleft();
+         turnleft();
+         move();
+         turnleft();
+         turnleft();
+         turnleft();
+         move();
+         turnleft();
+    }
+    
+    program () {
+        while(notNextToABeeper()){
+            if(frontIsBlocked()){
+               saltar();
+            }else{
+               move();
+            }
+        }
+        turnoff();
+    }
+}
