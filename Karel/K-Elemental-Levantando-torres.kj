@@ -1,0 +1,38 @@
+//K-Elemental-Levantando torres
+class program {
+    void put(){
+         putbeeper();
+         if(anyBeepersInBeeperBag()){
+              move();
+              put();
+              move();
+         }else{
+              turnleft();
+              turnleft();
+         }
+    }
+    
+    void avanzar(){
+         if(nextToABeeper()){
+             pickbeeper();
+             if(nextToABeeper()){
+                 while(nextToABeeper){
+                    pickbeeper();
+                 }
+                 turnleft();
+                 put();
+                 turnleft();
+             }else{
+                putbeeper();
+             }
+         }
+    }
+
+    program () {
+       while(nextToABeeper()){
+          avanzar();
+          move();
+       }
+       turnoff();
+    }
+}
