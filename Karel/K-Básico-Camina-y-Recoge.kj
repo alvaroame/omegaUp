@@ -1,0 +1,15 @@
+//K-Básico-Camina y recoge
+class program {
+    program () {
+       while(frontIsClear()){
+          while(nextToABeeper()){
+             pickbeeper();
+          }
+          move();
+       }
+       while(anyBeepersInBeeperBag()){
+           putbeeper();
+       }
+       turnoff();
+    }
+}
