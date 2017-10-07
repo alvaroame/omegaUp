@@ -1,0 +1,7 @@
+//Karel y su primer paso
+class program {
+    program () {
+        move();
+        turnoff();
+    }
+}
