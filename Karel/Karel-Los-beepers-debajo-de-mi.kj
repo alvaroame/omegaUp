@@ -1,0 +1,9 @@
+//Karel Los beepers debajo de mi
+class program {
+    program () {
+        while(nextToABeeper()){
+           pickbeeper();
+        }
+        turnoff();
+    }
+}
