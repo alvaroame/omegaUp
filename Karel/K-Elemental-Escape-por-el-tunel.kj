@@ -1,0 +1,9 @@
+//K-Elemental-Escape por el tunel
+class program {
+    program () {
+        while(leftIsBlocked() || rightIsBlocked()){
+             move();
+        }
+        turnoff();
+    }
+}
