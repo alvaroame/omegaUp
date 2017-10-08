@@ -1,0 +1,9 @@
+//Karel Siempre mirando hacia el norte
+class program {
+    program () {
+        while(notFacingNorth()){
+            turnleft();
+        }
+        turnoff();
+    }
+}
