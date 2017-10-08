@@ -1,0 +1,13 @@
+//Karel Caminando a lo más 15 pasos
+class program {
+    program () {
+        iterate(15){
+           if(frontIsClear()){
+               move();
+           }else{
+               return();   
+           }
+        }
+        turnoff();
+    }
+}
