@@ -1,0 +1,13 @@
+//K-Elemental-Vueltas y vueltas
+class program {
+    program () {
+        while(nextToABeeper()){
+           while(nextToABeeper()){
+              turnleft();
+              pickbeeper();
+           }
+           move();
+        }
+        turnoff();
+    }
+}
