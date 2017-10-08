@@ -1,0 +1,22 @@
+//Karel Buscando la esquina inferior
+class program {
+    void faceWest(){
+         while(notFacingWest()){
+              turnleft();
+         }
+    }
+    
+    void go(){
+         while(frontIsClear()){
+             move();
+        }
+    }
+
+    program () {
+        faceWest();
+        go();
+        turnleft();
+        go();
+        turnoff();
+    }
+}
