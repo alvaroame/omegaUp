@@ -1,0 +1,20 @@
+//Karel La escalera y los juguetes
+class program {
+    program () {
+        while(leftIsClear()){
+             while(nextToABeeper()){
+                  pickbeeper();
+             }
+             turnleft();
+             move();
+             turnleft();
+             turnleft();
+             turnleft();
+             move();
+        }
+        while(anyBeepersInBeeperBag()){
+             putbeeper();
+        }
+        turnoff();
+    }
+}
