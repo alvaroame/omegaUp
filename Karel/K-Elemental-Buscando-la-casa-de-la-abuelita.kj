@@ -1,0 +1,15 @@
+//K-Elemental-Buscando la casa de la abuelita
+class program {
+    program () {
+        while(frontIsClear() || nextToABeeper()){
+             if(nextToABeeper()){
+                pickbeeper();
+                turnleft();
+             }
+             if(frontIsClear()){
+                move();
+             }
+        }
+        turnoff();
+    }
+}
