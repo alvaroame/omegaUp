@@ -1,0 +1,27 @@
+//Karel Practicando para la carrera de obstaculos
+class program {
+    void jump(){
+        turnleft();
+        iterate(2){
+           move();
+           turnleft();
+           turnleft();
+           turnleft();
+        }
+        move();
+        turnleft();
+    }
+
+    program () {
+        while(frontIsBlocked()){
+            if(nextToABeeper()){
+              pickbeeper();
+              jump();
+            }
+        }
+        if(nextToABeeper()){
+            pickbeeper();
+        }
+        turnoff();
+    }
+}
