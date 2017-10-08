@@ -1,0 +1,35 @@
+//K-Elemental-Postes de luz
+class program {
+    void pickAll(){
+         pickbeeper();
+         move();
+         while(nextToABeeper()){
+              pickbeeper();
+              if(frontIsClear()){
+                    move();
+              }
+        }
+    }
+    
+    void backToStart(){
+        turnleft();
+        turnleft();
+        while(frontIsClear()){
+            move();
+        }
+        turnleft();
+        turnleft();
+        turnleft();
+    }
+
+    program () {
+        pickAll();
+        backToStart();
+        putbeeper();
+        while(anyBeepersInBeeperBag()){
+           move();
+           putbeeper();
+        }
+        turnoff();
+    }
+}
