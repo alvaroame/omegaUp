@@ -1,0 +1,33 @@
+
+//El primer cuadro de 5 x 5
+//Se puede crear cuadros de tamano n x n
+class program {
+    void put(){
+         iterate(5){
+               putbeeper();      
+         }
+         if(frontIsClear())
+            move();
+    }
+    
+    void go(n){
+         if(!iszero(n)){
+            iterate(2){
+               iterate(pred(n)){
+                   put();
+               }
+               turnleft();
+            }
+            put();
+            go(pred(n));
+          }
+    }
+
+    program () {
+        turnleft();
+        turnleft();
+        turnleft();
+        go(5);
+        turnoff();
+    }
+}
