@@ -1,0 +1,12 @@
+//Karel 25 beepers
+//De hecho pone todos los que tenga en la mochila.
+class program {
+    program () {
+        while(anyBeepersInBeeperBag()){
+             putbeeper();
+             if(frontIsClear())
+                move();
+        }
+        turnoff();
+    }
+}
