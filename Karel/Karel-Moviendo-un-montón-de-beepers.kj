@@ -1,0 +1,24 @@
+//Karel Moviendo un montón de beepers
+class program {
+    void pick(){
+         if(nextToABeeper()){
+             pickbeeper();
+             pick();
+             putbeeper();
+         }else{
+             faceRight();
+             move();
+         }
+    }
+    
+    void faceRight(){
+         while(notFacingEast()){
+              turnleft();
+         }
+    }
+    
+    program () {
+        pick();
+        turnoff();
+    }
+}
