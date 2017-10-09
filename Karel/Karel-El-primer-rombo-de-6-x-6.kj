@@ -1,0 +1,47 @@
+//Karel El primer rombo de 6 x 6
+//Karel puede crear un rombo de n x n
+class program {
+    void put(){
+         iterate(6){
+             putbeeper();
+         }
+    }
+    
+    void upleft(){
+         move();
+         turnleft();
+         move();
+         turnleft();
+         turnleft();
+         turnleft();
+         put();
+    }
+    
+    void upright(){
+         move();
+         turnleft();
+         turnleft();
+         turnleft();
+         move();
+         turnleft();
+         put();
+    }
+    
+    void iter(n){
+         iterate(2){
+            iterate(pred(n)){
+               upleft();
+            }
+            iterate(pred(n)){
+               upright();
+            } 
+            turnleft();
+            turnleft();
+        }
+    }
+
+    program () {
+       iter(5);
+       turnoff();
+    }
+}
