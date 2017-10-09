@@ -1,0 +1,21 @@
+//Karel Subiendo 20 escalones
+class program {
+    void up(){
+         move();
+         turnleft();
+         turnleft();
+         turnleft();
+         move();
+         turnleft();
+    }
+    program () {
+        turnleft();
+        putbeeper();
+        iterate(19){
+             up();
+             putbeeper();
+        }
+        
+        turnoff();
+    }
+}
