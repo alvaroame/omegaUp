@@ -1,0 +1,11 @@
+//Karel La orientación es importante
+class program {
+    program () {
+        putbeeper();
+        while(anyBeepersInBeeperBag()){
+            move();
+            putbeeper();
+        }
+        turnoff();
+    }
+}
