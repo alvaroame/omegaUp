@@ -1,0 +1,24 @@
+//Karel Son 1 o 2 beepers
+class program {
+    void faceSouth(){
+         while(notFacingSouth()){
+              turnleft();
+         }
+    }
+    
+    void faceNorth(){
+         while(notFacingNorth()){
+              turnleft();
+         }
+    }
+
+    program () {
+         putbeeper();
+         if(anyBeepersInBeeperBag()){
+              faceSouth(); 
+         }else{
+              faceNorth();
+         }
+        turnoff();
+    }
+}
