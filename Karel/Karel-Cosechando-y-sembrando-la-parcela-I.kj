@@ -1,0 +1,23 @@
+//Karel Cosechando y sembrando la parcela I
+class program {
+    program () {
+        iterate(10){
+            if(frontIsClear()){
+                 if(nextToABeeper()){
+                     pickbeeper();
+                 }else{
+                     putbeeper(); 
+                 }
+                 move();
+            }else{
+                 if(nextToABeeper()){
+                     pickbeeper();
+                 }else{
+                     putbeeper(); 
+                 }
+                 return();
+            }
+        }
+        turnoff();
+    }
+}
