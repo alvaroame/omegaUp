@@ -1,0 +1,23 @@
+//Karel Los canales del lago
+class program {
+    void go(){
+           while(frontIsClear() && notNextToABeeper()){
+                move();
+           }
+           if(leftIsClear()){
+              turnleft();
+              go();
+           }
+           if(rightIsClear()){
+              turnleft();
+              turnleft();
+              turnleft();
+              go();
+           }
+    }
+
+    program () {
+        go();
+        turnoff();
+    }
+}
