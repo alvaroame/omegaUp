@@ -1,0 +1,22 @@
+//Karel Midiendo la banqueta
+class program {
+
+    void go(){
+        if(frontIsClear()){
+           move();
+           go();
+        }else{
+        	turnleft();
+            turnleft();
+            while(frontIsClear()){
+                move();            
+            }
+        }
+        putbeeper();
+    }
+    
+    program () {
+    	go();
+        turnoff();
+    }
+}
