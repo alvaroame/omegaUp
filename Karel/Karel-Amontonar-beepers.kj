@@ -1,0 +1,37 @@
+//Karel Amontonar beepers
+class program {
+    void pickAll(){
+         if(nextToABeeper()){
+           while(nextToABeeper()){
+                pickbeeper();
+           }
+           if(frontIsClear()){
+                move();
+                pickAll();
+           }
+         }
+    }
+    void back(){
+         while(frontIsClear())
+            move();
+    }
+    
+    void putAll(){
+         while(anyBeepersInBeeperBag())
+            putbeeper();
+    }
+
+    program () {
+        while(nextToABeeper() && frontIsClear()){
+              pickAll();
+              turnleft();
+              turnleft();
+              back();
+              putAll();
+              turnleft();
+              move();
+              turnleft();
+        }
+        turnoff();
+    }
+}
