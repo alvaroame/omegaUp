@@ -1,0 +1,18 @@
+//Karel A Cuantas Calles
+class program {
+    void walk(n){
+         if(frontIsClear()){
+            move();
+            walk(succ(n));
+         }else{
+            iterate(n)
+               putbeeper();
+            putbeeper();
+            turnoff();
+         }
+    }
+
+    program () {
+        walk(0);
+    }
+}
