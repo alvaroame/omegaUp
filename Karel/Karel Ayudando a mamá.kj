@@ -1,0 +1,56 @@
+//Karel Ayudando a mamá - Karel
+class program {
+    void faceWest(){
+         while(notFacingWest())
+              turnleft();
+    }
+    
+    void faceEast(){
+         while(notFacingEast())
+              turnleft();
+    }
+    
+    void pickAll(){
+         while(nextToABeeper())
+              pickbeeper();
+    }
+    
+    void turn(n){
+         iterate(n)
+             turnleft();
+    }
+    
+    void jumpRight(){
+         turn(3);
+         move();
+    }
+    
+    void putAll(){
+         while(anyBeepersInBeeperBag())
+              putbeeper();
+    }
+    
+    void goTroward(){
+         while(frontIsClear())
+            move();
+    }
+
+    program () {
+         faceWest();
+         goTroward();
+         faceEast();
+         pickAll();
+         while(frontIsClear()){
+             move();
+             pickAll();
+         }
+         turn(1);
+         while(rightIsBlocked())
+               move();
+         jumpRight();
+         turn(3);
+         goTroward();
+         putAll();
+        turnoff();
+    }
+}
