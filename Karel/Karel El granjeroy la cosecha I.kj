@@ -1,0 +1,42 @@
+//Karel K-El granjero y la cosecha I
+class program {
+    void pickElotes(){
+         while(nextToABeeper()){
+              pickbeeper();
+         }
+         putbeeper();
+    }
+       
+    void go(){
+         if(nextToABeeper()){
+             pickElotes();
+             move();
+             go();
+             turnleft();
+             move();
+             go();
+             turnleft();
+             turnleft();
+             move();
+             go();
+             turnleft();
+             move();
+             move();
+             while(anyBeepersInBeeperBag()){
+                 putbeeper();
+             }
+             turnoff();
+             
+         }else{
+              turnleft();
+              turnleft();
+              move();
+              turnleft();
+              turnleft();
+         }
+       
+    }
+    program () {
+        go();
+    }
+}
