@@ -1,0 +1,45 @@
+//Karel Los Ratones de Karel, Episodio I
+class program {
+    void turn(n){
+         iterate(n)
+            turnleft();
+    }
+    
+    void faceNorth(){
+         while(notFacingNorth())
+              turnleft();
+    }
+    
+    void toStart(){
+         while(notFacingSouth())
+              turnleft();
+         while(frontIsClear())
+              move();
+    }
+
+    void moveRight(){
+         turn(3);
+         move();
+    }
+    
+    void findCheese(){
+         toStart();
+         faceNorth();
+         while(notNextToABeeper()){
+              if(rightIsClear()){
+                  moveRight();
+                  toStart();
+                  faceNorth();
+              }
+              else{
+                   if(frontIsClear())
+                       move();
+              }
+         }
+    }
+    
+    program () {
+        findCheese();
+        turnoff();
+    }
+}
