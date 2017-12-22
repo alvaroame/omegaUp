@@ -1,0 +1,32 @@
+//Karel K-Postes de la CFE
+class program {
+    void back(n){
+        iterate(n)
+           move();
+    }
+    
+    void turn(n){
+         iterate(n)
+            turnleft();
+    }
+    
+    void pickAll(n){
+         if(nextToABeeper()){
+            pickbeeper();
+            move();
+            pickAll(succ(n));
+            putbeeper();
+            if(frontIsClear())
+                 move();
+         }else{
+            turn(2);
+            back(n);
+            turn(3);
+         }
+    }
+    
+    program () {
+        pickAll(0);
+        turnoff();
+    }
+}
