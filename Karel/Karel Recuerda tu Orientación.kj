@@ -1,0 +1,29 @@
+//Karel Recuerda tu Orientación
+class program {
+    void turn(n){
+         iterate(n)
+            turnleft();
+    }
+    
+    void go(){
+         if(frontIsClear() && notNextToABeeper()){
+            move();
+            go();
+         }
+         if(leftIsClear() && notNextToABeeper()){
+            turnleft();
+            go();
+            turn(3);
+         }
+         if(rightIsClear() && notNextToABeeper()){
+            turn(3);
+            go();
+            turnleft();
+         }
+    }
+    
+    program () {
+        go();
+        turnoff();
+    }
+}
