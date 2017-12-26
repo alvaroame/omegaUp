@@ -1,0 +1,30 @@
+//Karel Chocolates faltantes I
+class program {
+    void count(n){
+         if(nextToABeeper()){
+            pickbeeper();
+            count(succ(n));
+         }else{
+            move();
+            resta(n);
+         }
+    }
+    
+    void resta(n){
+         if(nextToABeeper()){
+              pickbeeper();
+              resta(pred(n));
+         }else{
+              move();
+              iterate(n){
+                   putbeeper();
+                }
+              turnoff();
+         }
+    }
+    
+    program () {
+        count(0);
+        turnoff();
+    }
+}
