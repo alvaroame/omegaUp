@@ -1,0 +1,32 @@
+//K-Construyendo una cerca
+class program {
+ 
+    void square(n){
+         iterate(4){
+             iterate(n){
+                 putbeeper();
+                 move();
+             }
+             turnleft();
+         }
+    }
+    
+    void pick(n){
+         if(nextToABeeper()){
+            iterate(4){
+                pickbeeper();
+            }
+            pick(succ(n));
+         }else{
+             square(n);
+             turnoff();
+         }
+    }
+    
+    program () {
+        turnleft();
+        turnleft();
+        turnleft();
+        pick(0); 
+    }
+}
