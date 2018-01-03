@@ -1,0 +1,36 @@
+//Karel 3 x 3
+class program {
+    void walk(){
+         putbeepers();
+         if(frontIsClear()){
+            move();
+            walk();
+            move();
+         }else{
+            turnleft();
+            turnleft();
+         }
+    }
+    
+    void putbeepers(){
+         while(nextToABeeper())
+            pickbeeper();
+         iterate(3)
+            putbeeper();
+    }
+    
+    void goFoward(){
+         turnleft();
+         walk();
+         turnleft();
+         if(frontIsClear()){
+              move();
+              goFoward();
+         }
+    }
+    
+    program () {
+        goFoward();
+        turnoff();
+    }
+}
